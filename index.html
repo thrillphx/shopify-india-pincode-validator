@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pincode Validator</title>
+</head>
+<body>
+  <h2>Check COD Availability</h2>
+  <input id="pincode" placeholder="Enter pincode" />
+  <button onclick="check()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    const blocked = ["193999", "180001"]; // sample
+
+    function check() {
+      const pin = document.getElementById("pincode").value;
+      if (blocked.includes(pin)) {
+        document.getElementById("result").innerText = "COD not available";
+      } else {
+        document.getElementById("result").innerText = "COD available";
+      }
+    }
+  </script>
+</body>
+</html>
